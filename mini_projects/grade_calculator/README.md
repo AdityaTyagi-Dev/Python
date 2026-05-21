@@ -21,7 +21,9 @@ A python mini project that calculates percentage and overall grade based on user
 ## How to Run
 Run the Python file using:
 
+```
 python grade_calculator.py
+```
 
 ## Requirements
 - Python 3.x

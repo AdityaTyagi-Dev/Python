@@ -4,7 +4,7 @@ A collection of Python programs built while learning
 core concepts and applying them in real projects.
 
 ## 📁 Structure
-
+```
 Python/
 │
 ├── mini_projects/
@@ -13,6 +13,7 @@ Python/
 │
 └── projects/
     └── ...coming soon
+```
 
 ## 🔧 Mini Projects
 Small programs focused on individual Python concepts.

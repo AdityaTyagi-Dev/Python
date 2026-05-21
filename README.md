@@ -9,6 +9,7 @@ Python/
 │
 ├── mini_projects/
 │   ├── grade_calculator/
+│   ├── number_guessing_game/
 │   └── ...more coming soon
 │
 └── projects/
@@ -21,6 +22,7 @@ Small programs focused on individual Python concepts.
 | Project | Concepts Used |
 |---------|--------------|
 | Grade Calculator | If-Else, Loops, Exception Handling |
+| Number Guessing Game | Loops, Random Module, Exception Handling |
 
 ## 🚀 Projects
 Larger projects combining multiple concepts.

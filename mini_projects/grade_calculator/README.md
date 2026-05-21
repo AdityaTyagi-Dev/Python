@@ -39,9 +39,11 @@ python grade_calculator.py
 |  Below 40  |  Fail |
 
 ## Sample Output
+```
 Enter the number of subjects: 3
 Enter marks of subject 1: 85
 Enter marks of subject 2: 90
 Enter marks of subject 3: 78
 Percentage: 84.33
 Grade: A
+```

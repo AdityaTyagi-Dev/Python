@@ -5,11 +5,12 @@ core concepts and applying them in real projects.
 
 ## 📁 Structure
 ```
-Python/
+python/
 │
 ├── mini_projects/
 │   ├── grade_calculator/
 │   ├── number_guessing_game/
+│   ├── to_do_list/
 │   └── ...more coming soon
 │
 └── projects/
@@ -23,6 +24,7 @@ Small programs focused on individual Python concepts.
 |---------|--------------|
 | Grade Calculator | If-Else, Loops, Exception Handling |
 | Number Guessing Game | Loops, Random Module, Exception Handling |
+| To-Do List | Lists, Loops, If-Else, Exception Handling|
 
 ## 🚀 Projects
 Larger projects combining multiple concepts.

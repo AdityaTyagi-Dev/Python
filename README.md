@@ -7,6 +7,9 @@ core concepts and applying them in real projects.
 ```
 python/
 │
+├── practice/
+│   └── datetime_module.py
+│
 ├── mini_projects/
 │   ├── grade_calculator/
 │   ├── number_guessing_game/
@@ -16,6 +19,13 @@ python/
 └── projects/
     └── ...coming soon
 ```
+## 🔬 Practice
+Small practice files for individual concepts.
+
+| File | Concept |
+|------|---------|
+| datetime_module.py | Datetime module |
+
 
 ## 🔧 Mini Projects
 Small programs focused on individual Python concepts.

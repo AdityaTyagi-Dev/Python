@@ -10,14 +10,13 @@ python/
 ├── practice/
 │   └── datetime_module.py
 │
-├── mini_projects/
-│   ├── grade_calculator/
-│   ├── number_guessing_game/
-│   ├── to_do_list/
-│   └── ...more coming soon
-│
-└── projects/
-    └── ...coming soon
+└── mini_projects/
+    ├── grade_calculator/
+    ├── number_guessing_game/
+    ├── to_do_list/
+    ├── student_marks_tracker/
+    └── ...more coming soon
+
 ```
 ## 🔬 Practice
 Small practice files for individual concepts.
@@ -34,11 +33,8 @@ Small programs focused on individual Python concepts.
 |---------|--------------|
 | Grade Calculator | If-Else, Loops, Exception Handling |
 | Number Guessing Game | Loops, Random Module, Exception Handling |
-| To-Do List | Lists, Loops, If-Else, Exception Handling|
-
-## 🚀 Projects
-Larger projects combining multiple concepts.
-*Coming Soon*
+| To-Do List | Lists, Loops, If-Else, Exception Handling |
+| Student Marks Tracker | Dictionaries, Lists, Functions, Exception Handling |
 
 ## Requirements
 - Python 3.x

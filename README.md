@@ -15,6 +15,7 @@ python/
     ├── number_guessing_game/
     ├── to_do_list/
     ├── student_marks_tracker/
+    ├── contact_book/
     └── ...more coming soon
 
 ```
@@ -35,6 +36,7 @@ Small programs focused on individual Python concepts.
 | Number Guessing Game | Loops, Random Module, Exception Handling |
 | To-Do List | Lists, Loops, If-Else, Exception Handling |
 | Student Marks Tracker | Dictionaries, Lists, Functions, Exception Handling |
+| Contact Book | Dictionaries, Lists, Functions, Exception Handling |
 
 ## Requirements
 - Python 3.x

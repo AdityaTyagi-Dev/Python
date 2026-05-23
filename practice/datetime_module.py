@@ -69,3 +69,29 @@ print(textToDate)
 # timedelta
 future = now + datetime.timedelta(days=7)
 print(future)
+
+
+
+# Question 1: Print today's date in the format "Today is: day-month-year" (ex: Today is: 01-Jan-2027).
+print("Today is:", datetime.datetime.now().strftime("%d-%b-%Y"))
+
+# Question 2: Calculate how many days are left until New Year's Day (January 1st) from today's date.
+today = datetime.date.today()
+new_year = datetime.date(today.year + 1, 1, 1)
+days_left = (new_year - today).days
+print(f"Days left until New Year's Day: {days_left}")
+
+# Question 3: Take a date as input from the user in DD-MM-YYYY format and print the day of the week for that date.
+user_input = input("Enter a date (DD-MM-YYYY): ")
+user_date = datetime.datetime.strptime(user_input, "%d-%m-%Y")
+print(user_date.strftime("%A"))
+
+# Question 4: Print the current time in 12-hour format with AM/PM
+print(f"Current time: {datetime.datetime.now().strftime('%I:%M:%S %p')}")
+
+# Question 5: Calculate a person's age in years given their birthdate as input in DD-MM-YYYY
+today = datetime.datetime.today()
+user_bd = input("Enter your birthday (DD-MM-YYYY): ")
+user_bd_date = datetime.datetime.strptime(user_bd, "%d-%m-%Y")
+age = today.year - user_bd_date.year - ((today.month, today.day) < (user_bd_date.month, user_bd_date.day))
+print(age)

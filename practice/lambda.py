@@ -60,3 +60,32 @@ list1 = [1, 2, 3]
 list2 = [4, 5, 6]
 summed_lists = list(map(lambda x, y: x + y, list1, list2))
 print(summed_lists)  # Output: [5, 7, 9]
+
+
+
+
+# Question 1: Use a lambda function with filter() to extract all words longer than 4 characters from a list of words.
+words = ['apple', 'banana', 'cat', 'dog', 'elephant']
+long_words = list(filter(lambda x: len(x) > 4, words))
+print(long_words)  # Output: ['apple', 'banana', 'elephant']
+
+# Question 2: Use a lambda with sorted() to sort a list of dictionaries based on a specific key.
+people = [{'name': 'Alice', 'age': 30}, {'name': 'Bob', 'age': 25}, {'name': 'Charlie', 'age': 35}]
+sorted_people = sorted(people, key = lambda x: x["age"])
+print(sorted_people)  # Output: [{'name': 'Bob', 'age': 25}, {'name': 'Alice', 'age': 30}, {'name': 'Charlie', 'age': 35}]
+
+# Question 3: Use a lambda function with reduce() to find the maximum value in a list of numbers.
+import functools
+numbers = [3, 1, 4, 1, 5, 9, 2, 6]
+maximum = functools.reduce(lambda x, y: x if x > y else y, numbers)
+print(maximum)  # Output: 9
+
+# Question 4: Use map() with a lambda function to convert a list of temperatures from Celsius to Fahrenheit.
+celsius = [0, 20, 37, 100]
+fahrenheit = list(map(lambda x: round((1.8 * x) + 32, 2), celsius))
+print(fahrenheit)  # Output: [32.0, 68.0, 98.6, 212.0]
+
+# Question 5: Use a lambda with sorted() to sort a list of tuples based on the second element in descending order.
+data = [(1, 'apple'), (2, 'banana'), (3, 'cherry')]
+sorted_data = sorted(data, key = lambda x: x[1], reverse = True)
+print(sorted_data)  # Output: [(3, 'cherry'), (2, 'banana'), (1, 'apple')]

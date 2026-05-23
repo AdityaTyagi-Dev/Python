@@ -8,7 +8,8 @@ core concepts and applying them in real projects.
 python/
 │
 ├── practice/
-│   └── datetime_module.py
+│   ├── datetime_module.py
+│   └── lambda.py
 │
 └── mini_projects/
     ├── grade_calculator/
@@ -25,6 +26,7 @@ Small practice files for individual concepts.
 | File | Concept |
 |------|---------|
 | datetime_module.py | Datetime module |
+| lambda.py | Lambdas |
 
 
 ## 🔧 Mini Projects

@@ -11,14 +11,16 @@ python/
 │   ├── datetime_module.py
 │   └── lambda.py
 │
-└── mini_projects/
-    ├── grade_calculator/
-    ├── number_guessing_game/
-    ├── to_do_list/
-    ├── student_marks_tracker/
-    ├── contact_book/
-    └── ...more coming soon
-
+├── mini_projects/
+│   ├── grade_calculator/
+│   ├── number_guessing_game/
+│   ├── to_do_list/
+│   ├── student_marks_tracker/
+│   ├── contact_book/
+│   └── ...more coming soon
+│
+└── projects/
+    └── ...coming soon
 ```
 ## 🔬 Practice
 Small practice files for individual concepts.
@@ -39,6 +41,10 @@ Small programs focused on individual Python concepts.
 | To-Do List | Lists, Loops, If-Else, Exception Handling |
 | Student Marks Tracker | Dictionaries, Lists, Functions, Exception Handling |
 | Contact Book | Dictionaries, Lists, Functions, Exception Handling |
+
+## 🚀 Projects
+Larger projects combining multiple concepts.
+*Coming Soon*
 
 ## Requirements
 - Python 3.x

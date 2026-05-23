@@ -85,6 +85,7 @@ def search_contact(search):
     for name, contact in contacts.items():
         if search.lower() in [name.lower(), contact[0], contact[1]]:
             found = name
+            break
     if not found:
         print(f"No contact found with the search: {search}\n")
         return False

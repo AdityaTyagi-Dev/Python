@@ -17,6 +17,7 @@ python/
 │   ├── to_do_list/
 │   ├── student_marks_tracker/
 │   ├── contact_book/
+│   ├── caesar_cipher/
 │   └── ...more coming soon
 │
 └── projects/
@@ -41,6 +42,7 @@ Small programs focused on individual Python concepts.
 | To-Do List | Lists, Loops, If-Else, Exception Handling |
 | Student Marks Tracker | Dictionaries, Lists, Functions, Exception Handling |
 | Contact Book | Dictionaries, Lists, Functions, Exception Handling |
+| Caesar Cipher | Strings, Functions, Loops, ASCII, Modulo, Exception Handling |
 
 ## 🚀 Projects
 Larger projects combining multiple concepts.

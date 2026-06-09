@@ -16,10 +16,14 @@ python/
 │       │   ├── sample.txt
 │       │   └── sample2.txt
 │       │   
-│       └── csv_file/
-│           ├── csv_file.py
-│           ├── students.csv
-│           └── Students2.csv
+│       ├── csv_file/
+│       │   ├── csv_file.py
+│       │   ├── students.csv
+│       │   └── Students2.csv
+│       │
+│       └── json_file/
+│           ├── json_file.py
+│           └── student.json
 │
 ├── mini_projects/
 │   ├── grade_calculator/
@@ -42,6 +46,7 @@ Small practice files for individual concepts.
 | lambda.py | Lambdas |
 | txt_file.py | Handling txt files |
 | csv_file.py | Handling csv files |
+| json_file.py | Handling json files |
 
 
 ## 🔧 Mini Projects

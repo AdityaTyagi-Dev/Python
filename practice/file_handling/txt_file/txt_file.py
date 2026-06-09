@@ -40,3 +40,6 @@ file2.write("Hello Python\n") # write "Hello Python" in the text file
 file2.writelines(["Python is one of the most popular programming language\n", "Python is easy to learn\n"]) # write both the lines in the file
 
 file2.close() # close the file
+
+with open("sample2.txt", "r") as file3: # opening file using 'with open()'
+    print(file3.read())

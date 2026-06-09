@@ -11,10 +11,15 @@ python/
 │   ├── datetime_module.py
 │   ├── lambda.py
 │   └── file_handling/
-│       └── txt_file/
-│           ├── txt_file.py
-│           ├── sample.txt
-│           └── sample2.txt
+│       ├── txt_file/
+│       │   ├── txt_file.py
+│       │   ├── sample.txt
+│       │   └── sample2.txt
+│       │   
+│       └── csv_file/
+│           ├── csv_file.py
+│           ├── students.csv
+│           └── Students2.csv
 │
 ├── mini_projects/
 │   ├── grade_calculator/
@@ -36,6 +41,7 @@ Small practice files for individual concepts.
 | datetime_module.py | Datetime module |
 | lambda.py | Lambdas |
 | txt_file.py | Handling txt files |
+| csv_file.py | Handling csv files |
 
 
 ## 🔧 Mini Projects

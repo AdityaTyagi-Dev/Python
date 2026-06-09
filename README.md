@@ -9,7 +9,12 @@ python/
 │
 ├── practice/
 │   ├── datetime_module.py
-│   └── lambda.py
+│   ├── lambda.py
+│   └── file_handling/
+│       └── txt_file/
+│           ├── txt_file.py
+│           ├── sample.txt
+│           └── sample2.txt
 │
 ├── mini_projects/
 │   ├── grade_calculator/
@@ -30,6 +35,7 @@ Small practice files for individual concepts.
 |------|---------|
 | datetime_module.py | Datetime module |
 | lambda.py | Lambdas |
+| txt_file.py | Handling txt files |
 
 
 ## 🔧 Mini Projects

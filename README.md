@@ -10,20 +10,22 @@ python/
 ├── practice/
 │   ├── datetime_module.py
 │   ├── lambda.py
-│   └── file_handling/
-│       ├── txt_file/
-│       │   ├── txt_file.py
-│       │   ├── sample.txt
-│       │   └── sample2.txt
-│       │   
-│       ├── csv_file/
-│       │   ├── csv_file.py
-│       │   ├── students.csv
-│       │   └── Students2.csv
-│       │
-│       └── json_file/
-│           ├── json_file.py
-│           └── student.json
+│   ├── file_handling/
+│   │   ├── txt_file/
+│   │   │   ├── txt_file.py
+│   │   │   ├── sample.txt
+│   │   │   └── sample2.txt
+│   │   │   
+│   │   ├── csv_file/
+│   │   │   ├── csv_file.py
+│   │   │   ├── students.csv
+│   │   │   └── Students2.csv
+│   │   │
+│   │   └── json_file/
+│   │       ├── json_file.py
+│   │       └── student.json
+│   └── oops/
+│       └── class.py
 │
 ├── mini_projects/
 │   ├── grade_calculator/
@@ -47,6 +49,7 @@ Small practice files for individual concepts.
 | txt_file.py | Handling txt files |
 | csv_file.py | Handling csv files |
 | json_file.py | Handling json files |
+| class.py | Classes and objects |
 
 
 ## 🔧 Mini Projects

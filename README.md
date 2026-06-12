@@ -63,7 +63,7 @@ Small programs focused on individual Python concepts.
 |---------|--------------|
 | Grade Calculator | If-Else, Loops, Exception Handling |
 | Number Guessing Game | Loops, Random Module, Exception Handling |
-| To-Do List | Lists, Loops, If-Else, Exception Handling |
+| To-Do List | Lists, Loops, Functions, File Handling, Datetime |
 | Student Marks Tracker | Dictionaries, Lists, Functions, Exception Handling |
 | Contact Book | Dictionaries, Lists, Functions, Exception Handling |
 | Caesar Cipher | Strings, Functions, Loops, ASCII, Modulo, Exception Handling |

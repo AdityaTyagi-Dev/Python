@@ -17,7 +17,7 @@ bank = BankAccount(5000, "Rahul")
 bank.deposit(1000)
 print(bank.get_balance())
 print(bank._name)
-# print(bank.__balance)
+# print(bank.__balance) -> will give an error
 
 '''
 no underscore = public

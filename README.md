@@ -26,7 +26,8 @@ python/
 │   │       └── student.json
 │   └── oops/
 │       ├── class.py
-│       └── encapsulation.py
+│       ├── encapsulation.py
+│       └── inheritance.py
 │
 ├── mini_projects/
 │   ├── grade_calculator/
@@ -52,6 +53,7 @@ Small practice files for individual concepts.
 | json_file.py | Handling json files |
 | class.py | Classes and objects |
 | encapsulation.py | private, protected and public members |
+| inheritance.py | Inheritance |
 
 
 ## 🔧 Mini Projects

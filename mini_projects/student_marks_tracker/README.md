@@ -1,6 +1,6 @@
 # Student Marks Tracker
 
-A Python mini project that allows users to manage student records and calculate statistics.
+A Python mini project that allows users to manage student records and calculate statistics. Data is saved permanently using JSON file storage.
 
 ## Features
 - Add students with marks (1-8 subjects per student)
@@ -10,6 +10,7 @@ A Python mini project that allows users to manage student records and calculate 
 - Delete student with confirmation
 - Duplicate student check with override
 - Input validation
+- Data persists after program closes
 
 ## Concepts Used
 - Dictionaries
@@ -18,7 +19,8 @@ A Python mini project that allows users to manage student records and calculate 
 - If-Else
 - Loops
 - Exception Handling
-- Built-in Functions (sum, max, min, round)
+- File Handling (JSON)
+- json module
 
 ## How to Run
 ```

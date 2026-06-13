@@ -1,4 +1,13 @@
+import json
+
 print("Welcome to Student Marks Tracker\n")
+
+try:
+    with open("student_marks_tracker.json","r") as file:
+        data = json.load(file)
+except (json.JSONDecodeError, FileNotFoundError):
+    with open("student_marks_tracker.json","w") as file:
+        json.dump({}, file)
 
 def grade(percent):
     if percent >= 90:
@@ -15,7 +24,7 @@ def grade(percent):
         return 'P'
     else:
         return 'F'
-
+    
 def input_name():
     while True:
         try:
@@ -57,51 +66,64 @@ def input_marks(num):
 
 def add():
     name = input_name()
-    num_of_sub = input_sub()
-    marks = input_marks(num_of_sub)
-
+    marks = input_marks(input_sub())
     confirm_add = True
-    if name in data:
-        print(f"Student {name} is already entered !!")
-        print("Entering yes will override the data, otherwise addition will be cancelled")
-        confirm = input("(yes/no): ")
-        if confirm.lower() == 'yes':
-            confirm_add = True
-        else:
-            confirm_add = False
-        
-    if confirm_add:
-        data[name] = marks
-        print("New Student Added")
-        print(f"Student: {name}")
-        print(f"Marks: {data[name]}\n")
+    try:
+        with open("student_marks_tracker.json","r") as file:
+            data = json.load(file)
+        if name in data:
+            print(f"Student {name} is already entered !!")
+            print("Entering yes will override the data, otherwise addition will be cancelled")
+            confirm = input("(yes/no): ")
+            if confirm.lower() == "yes":
+                confirm_add = True
+            else:
+                confirm_add = False
+        if confirm_add:
+            data[name] = marks
+            print("New Student Added")
+            print(f"Student: {name}")
+            print(f"Marks: {data[name]}\n")
+            with open("student_marks_tracker.json", "w") as file2:
+                json.dump(data, file2, indent = 4)
 
-    else:
-        print("Addition of data canceled\n")
+        else:
+            print("Addition of data canceled\n")
+    except:
+        with open("student_marks_tracker.json","w") as file:
+            data = {name : marks}
+            json.dump(data, file, indent=4)
+            
 
 def view():
-    if not data:
-        print("No student!")
-    else:
+    try:
+        with open("student_marks_tracker.json","r") as file:
+            data = json.load(file)
+            if not data:
+                raise ValueError
         print("| Name | Marks |")
-        for name, marks in data.items():
-            print(f"| {name} | {marks} |")
-    print()
+        for name in data:
+            print(f"| {name} | {data[name]}")
+    except ValueError:
+        print("No Student!!")
+    finally:
+        print()
 
 def stat():
-    if not data:
-        print("No student!")
-    else:
+    try:
+        with open("student_marks_tracker.json","r") as file:
+            data = json.load(file)
+            if not data:
+                raise ValueError
         while True:
             try:
-                name = input("Enter the name of student: ")
-                if name.capitalize() not in data:
+                name = input_name()
+                name = name.capitalize()
+                if name not in data:
                     raise ValueError
-                print()
                 break
             except ValueError:
-                print("Incorrect name")
-        name = name.capitalize()
+                print("Incorrect name\n")
         print(f"Name: {name}")
         print(f"Marks: {data[name]}")
         sum_of_marks = sum(data[name])
@@ -110,12 +132,17 @@ def stat():
         print(f"Grade: {grade(percentage)}")
         print(f"Highest: {max(data[name])}")
         print(f"Lowest: {min(data[name])}")
+    except ValueError:
+        print("No Student!!")
+    finally:
         print()
 
 def topper():
-    if not data:
-        print("No Student!")
-    else:
+    try:
+        with open("student_marks_tracker.json","r") as file:
+            data = json.load(file)
+            if not data:
+                raise ValueError   
         top_name = next(iter(data))
         highest = round(sum(data[top_name]) / len(data[top_name]), 2)
         for name, marks in data.items():
@@ -128,12 +155,17 @@ def topper():
         print(f"Marks: {data[top_name]}")
         print(f"Percentage: {highest}")
         print(f"Grade: {grade(highest)}")
-    print()
+    except ValueError:
+        print("No Student!!")
+    finally:
+        print()
 
 def delete():
-    if not data:
-        print("No students!")
-    else:
+    try:
+        with open("student_marks_tracker.json","r") as file:
+            data = json.load(file)
+            if not data:
+                raise ValueError
         print("| Name | Marks |")
         for name, marks in data.items():
             print(f"| {name} | {marks} |")
@@ -156,15 +188,18 @@ def delete():
                     break
             except ValueError:
                 print("Incorrect input\n")
-                    
         if deleted:
             del data[name]
+            with open("student_marks_tracker.json","w") as file:
+                json.dump(data, file, indent = 4)
             print("Deleted successfully")
         else:
             print("Deletion canceled")
+    except ValueError:
+        print("No Student!!")
+    finally:
         print()
 
-data = {}
 while True:
     print("- Enter 1 for 'ADD STUDENT'")
     print("- Enter 2 for 'VIEW ALL STUDENTS'")

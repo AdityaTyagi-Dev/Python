@@ -1,15 +1,16 @@
 # Contact Book
 
-A Python mini project to manage contacts with full CRUD operations.
+A Python project that allows users to manage their contacts through a simple menu-driven interface. Data is saved permanently using JSON file storage.
 
 ## Features
 - Add contacts with name, phone and email
 - View all contacts
 - Search contact by name, phone or email
-- Edit contact details
+- Edit specific fields of a contact
 - Delete contact with confirmation
 - Duplicate contact check with override
 - Input validation (international phone numbers, email format)
+- Data persists after program closes
 
 ## Concepts Used
 - Dictionaries
@@ -18,7 +19,9 @@ A Python mini project to manage contacts with full CRUD operations.
 - If-Else
 - Loops
 - Exception Handling
-- Built-in Functions
+- File Handling (JSON)
+- String Methods
+- json module
 
 ## How to Run
 Run the Python file using:

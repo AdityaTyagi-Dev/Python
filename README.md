@@ -65,7 +65,7 @@ Small programs focused on individual Python concepts.
 | Number Guessing Game | Loops, Random Module, Exception Handling |
 | To-Do List | Lists, Loops, Functions, File Handling, Datetime |
 | Student Marks Tracker | Dicts, Lists, Functions, File Handling, JSON |
-| Contact Book | Dictionaries, Lists, Functions, Exception Handling |
+| Contact Book | Dicts, Lists, Functions, File Handling, JSON, String Methods |
 | Caesar Cipher | Strings, Functions, Loops, ASCII, Modulo, Exception Handling |
 
 ## 🚀 Projects

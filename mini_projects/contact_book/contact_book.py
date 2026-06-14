@@ -1,8 +1,18 @@
+import json
+
 print("Welcome to Contact Book\n")
 
-contacts = {}
+try:
+    with open("contact_book.json", "r") as file:
+        contacts = json.load(file)
+except (json.JSONDecodeError, FileNotFoundError):
+    with open("contact_book.json", "w") as file:
+        json.dump({}, file)
+
 def add_contact(name, phone, email):
     add = True
+    with open("contact_book.json", "r") as file:
+        contacts = json.load(file)
     if name in contacts:
         print(f"Contact with the name: {name} already exist")
         print("Entering yes will overwrite the new data")
@@ -15,9 +25,10 @@ def add_contact(name, phone, email):
         print(f"Name: {name}")
         print(f"Phone: {phone}")
         print(f"Email: {email}\n")
+        with open("contact_book.json", "w") as file:
+            json.dump(contacts, file)
     else:
         print("Contact addition canceled")
-
 
 def input_name():
     while True:
@@ -50,7 +61,7 @@ def input_phone():
             return phone
         except ValueError:
             print("Invalid phone number\n")
-                
+
 def input_email():
     while True:
         try:
@@ -72,18 +83,22 @@ def input_email():
             print("Invalid email\n")
 
 def view_contacts():
+    with open("contact_book.json", "r") as file:
+        contacts = json.load(file)
     if not contacts:
         print("No Contact!\n")
     else:
         print("| Name | Phone | Email |")
-        for name, contact in contacts.items():
-            print(f"| {name} | {contact[0]} | {contact[1]} |")
+        for name in contacts:
+            print(f"| {name} | {contacts[name][0]} | {contacts[name][1]}")
         print()
 
 def search_contact(search):
     found = None
-    for name, contact in contacts.items():
-        if search.lower() in [name.lower(), contact[0], contact[1]]:
+    with open("contact_book.json", "r") as file:
+        contacts = json.load(file)
+    for name in contacts:
+        if search.lower() in [name.lower(), contacts[name][0], contacts[name][1]]:
             found = name
             break
     if not found:
@@ -91,9 +106,11 @@ def search_contact(search):
         return False
     else:
         return found
-
+    
 def edit_contact(search):
     name = search_contact(search)
+    with open("contact_book.json", "r") as file:
+        contacts = json.load(file)
     if not name:
         return None
     else:
@@ -127,26 +144,31 @@ def edit_contact(search):
                     data = [name, contacts[name][0], new_email]
                 del contacts[name]
                 contacts[data[0]] = data[1:]
+                with open("contact_book.json", "w") as file:
+                    json.dump(contacts, file)
                 return None
             except ValueError:
                 print("Invalid choice\n")
 
 def delete_contact(search):
     name = search_contact(search)
+    with open("contact_book.json", "r") as file:
+        contacts = json.load(file)
     if not name:
         return None
     else:
-        print("Are you sure you want to delete this")
+        print("Are you sure you want to delete this contact")
         print(f"Name: {name}")
         print(f"Phone: {contacts[name][0]}")
         print(f"Email: {contacts[name][1]}\n")
         confirm = input("(yes/no): ")
         if confirm.lower() == "yes":
             del contacts[name]
+            with open("contact_book.json", "w") as file:
+                json.dump(contacts, file)
             print("Contact deleted\n")
         else:
             print("Deletion Canceled\n")
-
 
 while True:
     print("- Enter 1 for 'ADDING CONTACT'")
@@ -154,7 +176,7 @@ while True:
     print("- Enter 3 for 'SEARCHING CONTACT'")
     print("- Enter 4 for 'EDITING CONTACT'")
     print("- Enter 5 for 'DELETING CONTACT'")
-    print("- Enter 6 for 'EXIT'\n")
+    print("- Enter 6 for 'EXIT'")
     try:
         choice = int(input("Enter your choice: "))
         if choice not in [1, 2, 3, 4, 5, 6]:
@@ -162,19 +184,16 @@ while True:
     except ValueError:
         print("Invalid choice\n")
         continue
-
     print()
-
     if choice == 1:
-        name = input_name()
-        phone = input_phone()
-        email = input_email()
-        add_contact(name, phone, email)
+        add_contact(input_name(), input_phone(), input_email())
 
     elif choice == 2:
         view_contacts()
     
     elif choice == 3:
+        with open("contact_book.json", "r") as file:
+            contacts = json.load(file)
         if not contacts:
             print("No contact!\n")
         else:
@@ -183,22 +202,27 @@ while True:
             if found_name:
                 print(f"Name: {found_name}")
                 print(f"Phone: {contacts[found_name][0]}")
-                print(f"Email: {contacts[found_name][1]}\n")
+                print(f"Email: {contacts[found_name][1]}")
+                print()
 
     elif choice == 4:
+        with open("contact_book.json", "r") as file:
+            contacts = json.load(file)
         if not contacts:
-            print("No contact!\n")
+            print("No Contact!\n")
         else:
             search_by = input("Enter name/phone/email to search contact: ")
             edit_contact(search_by)
 
     elif choice == 5:
+        with open("contact_book.json", "r") as file:
+            contacts = json.load(file)
         if not contacts:
-            print("No contact!\n")
+            print("No Contact!\n")
         else:
             search_by = input("Enter name/phone/email to search contact: ")
             delete_contact(search_by)
-
     else:
         print("Thanks for using Contact Book")
         break
+        

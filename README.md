@@ -36,6 +36,7 @@ python/
 │   ├── student_marks_tracker/
 │   ├── contact_book/
 │   ├── caesar_cipher/
+│   ├── dice_rolling_simulator/
 │   └── ...more coming soon
 │
 └── projects/
@@ -67,6 +68,7 @@ Small programs focused on individual Python concepts.
 | Student Marks Tracker | Dicts, Lists, Functions, File Handling, JSON |
 | Contact Book | Dicts, Lists, Functions, File Handling, JSON, String Methods |
 | Caesar Cipher | Strings, Functions, Loops, ASCII, Modulo, Exception Handling |
+| Dice Rolling Simulator | Loops, Functions, Random module, Statistics Module |
 
 ## 🚀 Projects
 Larger projects combining multiple concepts.

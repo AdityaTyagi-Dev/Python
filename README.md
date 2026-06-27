@@ -37,6 +37,7 @@ python/
 │   ├── contact_book/
 │   ├── caesar_cipher/
 │   ├── dice_rolling_simulator/
+│   ├── expense_tracker/
 │   └── ...more coming soon
 │
 └── projects/
@@ -69,6 +70,7 @@ Small programs focused on individual Python concepts.
 | Contact Book | Dicts, Lists, Functions, File Handling, JSON, String Methods |
 | Caesar Cipher | Strings, Functions, Loops, ASCII, Modulo, Exception Handling |
 | Dice Rolling Simulator | Loops, Functions, Random module, Statistics Module |
+| Expense Tracker | Loops, Functions, File Handling, CSV, Datetime |
 
 ## 🚀 Projects
 Larger projects combining multiple concepts.
